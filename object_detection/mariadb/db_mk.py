@@ -22,22 +22,22 @@ from mysql.connector import (connection)
 sql_0 = "DROP DATABASE drone_project;"
 sql_1 = "CREATE DATABASE drone_project;"
 ######## 테이블 명 잘보고 바꾸기!!!#####################
-dummy ='''
+detect ='''
     CREATE TABLE `detect` (
-	`id` INT(11) NULL DEFAULT NULL,
+	`id` int NOT NULL AUTO_INCREMENT,
 	`cctv` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_general_ci',
 	`Latitude` DECIMAL(20,5) NULL DEFAULT NULL,
 	`Longitude` DECIMAL(20,5) NULL DEFAULT NULL,
-	`StartTime` DATETIME NULL DEFAULT NULL,
-	`EndTime` DATETIME NULL DEFAULT NULL,
-	`detection` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_general_ci'
+	`StartTime` DATETIME(2) NULL DEFAULT NULL,
+	`EndTime` DATETIME(2) NULL DEFAULT NULL,
+	`detection` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8_general_ci',
+
+    PRIMARY KEY (id)
 )
 COLLATE='utf8_general_ci'
 ENGINE=InnoDB
 ;
-
-
-    '''
+'''
 # sql_3 ='''
 # CREATE TABLE webcam (
 #     id INT(10) UNSIGNED NOT NULL,
@@ -81,7 +81,7 @@ conn = connection.MySQLConnection(
     database = "drone_project"
 )
 cur = conn.cursor()
-cur.execute(dummy)
+cur.execute(detect)
 conn.close()
 
 # 3. data 추가 
