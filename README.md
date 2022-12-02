@@ -19,3 +19,13 @@ ls : 파일 확인
 git add 2022_10_18/numpy.md : 수정할 파일 지정
 
 202
+
+master 분기생성 및 push
+git checkout -b master
+git push origin master
+
+
+local 에 저장소를 clone 한 경우 다음과 같이 기본 저장소 이름을 바꿔줘야 합니다.
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
