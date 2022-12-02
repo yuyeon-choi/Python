@@ -1,6 +1,5 @@
 # 딕셔너리 특성 행렬로 변환
 import pandas as pd
-
 from sklearn.feature_extraction import DictVectorizer
 data_dict = [{"Red": 2, "Blue": 4},
              {"Red": 4, "Blue": 3},
