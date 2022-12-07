@@ -83,3 +83,11 @@ for d in possible_contours:
                   color=(0, 255, 0), thickness=1)
 
 imshow(temp_result, 'temp_result')
+
+"""
+위 사진은 추려낸 contours들이다.
+번호판 위치에 contours들이 선별된 걸 볼 수 있지만
+전혀 관련 없는 영역의 contours들도 저장되었다.
+이제 더 기준을 강화하여 번호판 글자들을 찾아야한다.
+"""
+
