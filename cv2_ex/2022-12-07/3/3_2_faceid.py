@@ -15,8 +15,8 @@ eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
 ## 2. 얼굴 이미지 데이터 읽기
 ## Loading the image
 img = cv2.imread('./face01.png')
-cv2.imshow("image show", img)
-cv2.waitKey(0)
+# cv2.imshow("image show", img)
+# cv2.waitKey(0)
 
 ## 2. 얼굴 이미지 바운딩 박스
 ## >> 케스케이드 경우는 그레이 스케일 이미지에서만 작동
@@ -28,8 +28,8 @@ faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 for(x, y, w, h) in faces:
     cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 3)
 
-cv2.imshow("face", img)
-cv2.waitKey(0)
+# cv2.imshow("face", img)
+# cv2.waitKey(0)
 
 '''
 detectMultiScale() -> 바운딩 박스 좌표를 획득 가능
@@ -130,9 +130,11 @@ h, w = img.shape[:2]
 center = (w // 2, h // 2)
 # Defining a matrix M and calling
 # cv2.getRotationMatrix2D method
-M = cv2.getRotationMatrix2D(center, (angle), 1.0)
+M = cv2.getRotationMatrix2D(center, angle, 1.0)
 # Applying the rotation to our image using the cv2.warpAffine method
 rotated = cv2.warpAffine(img, M, (w, h))
+
+# 결과 -> -21.80140948635181 도
 cv2.imshow("face", rotated)
 cv2.waitKey(0)
 
@@ -144,20 +146,20 @@ cv2.waitKey(0)
 이 코드로 처리하는 다른 모든 사진에 대해 동일한 작업을 수행할 수 있습니다.
 그런 다음 이러한 결과의 비율을 계산하고 해당 비율에 따라 이미지를 확장할 수 있습니다.
 '''
-dist_1 = np.sqrt((delta_x * delta_x) + delta_y * delta_y)
-dist_2 = np.sqrt((delta_x_1 * delta_x_1) + (delta_y_1 * delta_y_1))
+# dist_1 = np.sqrt((delta_x * delta_x) + delta_y * delta_y)
+# dist_2 = np.sqrt((delta_x_1 * delta_x_1) + (delta_y_1 * delta_y_1))
 
-# calculate the ratio
-ratio = dist_1 / dist_2
+# # calculate the ratio
+# ratio = dist_1 / dist_2
 
-# Defining the width and height
-h = 476
-w = 488
-# Defining aspect ratio of a resized image
-dim = (int(w * ratio), int(h * ratio))
-# We have obtained a new image that we call resized3
-resized = cv2.resize(rotated, dim)
+# # Defining the width and height
+# h = 476
+# w = 488
+# # Defining aspect ratio of a resized image
+# dim = (int(w * ratio), int(h * ratio))
+# # We have obtained a new image that we call resized3
+# resized = cv2.resize(rotated, dim)
 
-cv2.imshow("face", resized)
-cv2.waitKey(0)
+# cv2.imshow("face", resized)
+# cv2.waitKey(0)
 
