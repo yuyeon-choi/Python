@@ -38,7 +38,6 @@ class CustomImageDataset(Dataset):
 
 
 
-
 #Define Neural Networks Model.
 
 class Net(nn.Module):
@@ -148,3 +147,6 @@ for epoch in range(1, 11):
     train(log_interval, model, device, train_loader, optimizer, epoch)
     test(log_interval, model, device, test_loader)
 torch.save(model, './model.pt')
+
+
+
