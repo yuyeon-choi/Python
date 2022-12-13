@@ -29,3 +29,16 @@ local 에 저장소를 clone 한 경우 다음과 같이 기본 저장소 이름
 git branch -m master main
 git fetch origin
 git branch -u origin/main main
+-------------------
+1. git init
+
+2. [F1] git clone
+
+repository 연결 후 fetch 작업
+git push --set-upstream origin main
+
+3. git remote add origin "http://"
+    - 연결되었는지 확인! => git remote -v
+
++ 브런치 바꾸기
+git checkout main
