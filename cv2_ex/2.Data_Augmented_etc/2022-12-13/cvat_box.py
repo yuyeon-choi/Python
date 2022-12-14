@@ -1,3 +1,4 @@
+# cvat 1.1 로 다운로드
 import os
 import glob
 import cv2
@@ -22,8 +23,9 @@ def find_xml_file(xml_folder_path):
     return all_root
 
 
-xml_dirs = find_xml_file("./cvat_annotations/")
-# ['./cvat_annotations/annotations.xml']
+xml_dirs = find_xml_file("./cv2_ex/2.Data_Augmented_etc/2022-12-13/image01_T/cvat_annotations/")
+print(xml_dirs)
+# ['./cv2_ex/2.Data_Augmented_etc/2022-12-13/image01_T/cvat_annotations/annotations.xml']
 
 for xml_dir in xml_dirs:
     tree = parse(xml_dir)
@@ -34,7 +36,7 @@ for xml_dir in xml_dirs:
         # xml 에 기록된 이미지 이름
         image_name = img_meta.attrib['name']
 
-        image_path = os.path.join("./images", image_name)
+        image_path = os.path.join("./cv2_ex/2.Data_Augmented_etc/2022-12-13/image01_T/images", image_name)
         # ./images/aaa.png
 
         # image read
@@ -59,8 +61,8 @@ for xml_dir in xml_dirs:
 
             rect_img = cv2.rectangle(
                 image, (box[0], box[1]), (box[2], box[3]), (0, 225, 255), 2)
-
-        cv2.namedWindow("aaaa")
-        cv2.moveWindow("aaaa", 40, 30)
-        cv2.imshow("aaaa", rect_img)
+        
+        cv2.namedWindow("test")
+        cv2.moveWindow("test", 40, 30)  # 이미지 창 위치 변경
+        cv2.imshow("test", rect_img)
         cv2.waitKey(0)
