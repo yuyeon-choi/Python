@@ -73,4 +73,4 @@ for category in coco_info['categories']:
 
 pass는 실행할 것이 아무 것도 없다는 것을 의미한다. 
 따라서 아무런 동작을 하지 않고 다음 코드를 실행한다.
-'''
+''' 
