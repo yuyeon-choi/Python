@@ -5,10 +5,6 @@
 https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 
 
-가상환경 설정 
-콘다 파이썬버전 3.8이상으로 설치
-
-
 conda prompt 실행 >
 v1.9.0
 Conda
@@ -22,3 +18,6 @@ conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=1
 
 # CPU Only  - 노트북
 conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cpuonly -c pytorch
+
+conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=10.2 -c pytorch
+conda uninstall pytorch, torchvision
