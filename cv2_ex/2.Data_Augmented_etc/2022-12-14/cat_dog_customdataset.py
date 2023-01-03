@@ -1,4 +1,6 @@
 """
+cv2_ex/2.Data_Augmented_etc/2022-12-13/dataset
+
 dataset 
     - train
         - cat 
@@ -27,18 +29,20 @@ class cat_dog_mycustomdataset(Dataset):
     def __getitem__(self, index):
         image_path = self.all_data_path[index]
         img = Image.open(image_path).convert("RGB")
-        label_temp = image_path.split("/")
-        # ['.', 'dataset', 'train', 'cat', 'cat.2718.jpg']
-        label = label_dit[label_temp[3]]
-
+        label_temp = image_path.split("\\")
+        # label_temp => ['.', 'dataset', 'train', 'cat', 'cat.2718.jpg']
+        label = label_dit[label_temp[1]]        # [3] -> [1]로 변경해서 되었는데 이유를 모름...
         return img, label
+        
 
     def __len__(self):
         # 전체 데이터 길이 반환
         return len(self.all_data_path)
+        
 
 
-test = cat_dog_mycustomdataset("./dataset/train/")
+test = cat_dog_mycustomdataset("./cv2_ex/2.Data_Augmented_etc/2022-12-13/dataset/train/")
 
 for i in test:
+    print(i)
     pass
