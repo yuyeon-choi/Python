@@ -4,7 +4,7 @@ import numpy as np
 
 
 def cvTest():
-    image = cv2.imread('./01.jpg')
+    image = cv2.imread('./cv2_ex/3.Data_processing_project/2022-12-16/01.jpg')
     y_ = image.shape[0]
     x_ = image.shape[1]
 

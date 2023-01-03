@@ -1,6 +1,3 @@
-오전T
-12:12~ 이론쉅 듣기
-
 ### 면접준비시 참고!
 https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 

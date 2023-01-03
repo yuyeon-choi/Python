@@ -29,7 +29,7 @@ def visualize_bbox(image, bboxes, category_ids, category_id_to_name,
     cv2.waitKey(0)
 
 
-image = cv2.imread("./01.jpg")
+image = cv2.imread("./cv2_ex/3.Data_processing_project/2022-12-16/01.jpg")
 
 # dog -> [468.94, 92.01, 171.06, 248.45] 2
 # cat -> [3.96, 183.38, 200.88, 214.03] 1

@@ -1,5 +1,7 @@
 from torch.utils.data.dataset import Dataset
 from torchvision import transforms
+import cv2
+
 label_dic = {"cat": 0, "dog": 1}
 
 

@@ -11,7 +11,7 @@ def visualize(image):
 
 
 # Load the image from the disk
-image = cv2.imread("./weather.jpg")
+image = cv2.imread("./cv2_ex/3.Data_processing_project/2022-12-16/weather.jpg")
 
 # visualize the original image
 # visualize(image)
