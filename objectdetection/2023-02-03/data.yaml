@@ -1,0 +1,21 @@
+# path : ./dataset/
+train : ./dataset/train/images
+val : ./dataset/val/images
+
+
+# Classes
+names:
+  0: garbage_bag
+  1: street_vendor
+  2: food_truck
+  3: banner
+  4: tent
+  5: flame
+  6: pet
+  7: bench
+  8: park_pot
+  9: trash_can
+  10: rest_area
+  11: toilet
+  12 : street_lamp
+  13 : park_info
