@@ -1,4 +1,5 @@
 import cv2
+import numpy
 vidcap = cv2.VideoCapture('./video/19.Xiaomi FIMI X8 SE 2020 DRONE vs Mavic AIR DRONE FLIGHT TEST.mp4') ## 다운받은 비디오 이름 
 success,image = vidcap.read()
 count = 0
